@@ -1,0 +1,241 @@
+body{
+   margin: 0;
+   padding:0;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+}
+
+.menubar{
+    background-color: #17c0eb;
+    height:100vh;
+    position: fixed;
+    border-radius: 15px;
+}
+
+.menuUl {
+    padding: 5px 0px 20px 0px;
+    list-style: none;
+}
+
+.menulist{
+    padding: 17px 20px 17px 12px;
+    color:white;
+    position:relative;
+    
+}
+
+
+.underline{
+    border-bottom: 2px solid rgb(211, 211, 255);
+}
+
+/* .menulist:hover .submenu{
+    display:block;
+} */
+
+.icons{
+    padding-right:5px ;
+    vertical-align:middle;
+    padding-left: 10px;
+}
+
+/* hr {
+    width: 372px;
+    margin-left: -75px;
+    margin-top:5px;
+    opacity:0.3;
+} */
+
+
+.activemenu{
+    display: block !important;
+}
+
+.tap-para{
+    display: none;
+}
+
+.tap-para.activemenucontent{
+    display:block;
+}
+
+.profile-cont{
+    display:none;
+}
+.paramenu{
+    display: block !important;
+}
+
+
+.submenu li{
+    padding:10px 14px;
+}
+.sublist {
+    position: relative;
+    list-style: none;
+}
+
+.sublist1 {
+    position: relative;
+    list-style: none;
+}
+.sublist::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 22px;
+    background-color: #17c0eb;
+    left: 0;
+    display:none;
+}
+
+.sublist:hover::before{
+    display:block;
+}
+.sublist1::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 22px;
+    background-color: #17c0eb;
+    left: 0;
+    display:none;
+}
+
+.sublist1:hover::before{
+    display:block;
+}
+
+
+.content{
+    display:flex;
+    flex-direction: column;
+    padding:30px;
+    margin-left:310px;
+}
+
+
+
+.listname{
+    width:150px;
+    display:none;
+}
+.active li .listname{
+    display:inline-block!important;
+}
+
+
+
+.submenu{
+    padding:10px 0;
+    background-color: #333333;
+    display:none;
+    position:relative;
+    width:160px;
+}
+
+
+.menuUl .submenu{
+    position:absolute;
+    left:63px;
+    top:0;
+}
+
+.active .submenu{
+    position:relative;
+    left:0px;
+}
+
+/* .triangle {
+    position: absolute;
+    top: -3px;
+    transform: rotate(180deg);
+    left: 12px;
+    color: #17c0eb;
+} */
+
+.menuUl .triangle{
+    position: absolute;
+    top:20px;
+    transform: rotate(90deg);
+    left: -3px;
+    color: #17c0eb;
+}
+.active .triangle{
+    position: relative;
+    transform: rotate(180deg);
+    top: -12px;
+    left: 12px;
+}
+/* .active .triangle{
+    position:relative;
+    left:0px;
+} */
+
+
+
+.active .menuicon {
+    margin-top: 15px;
+    cursor: pointer;
+    position:relative;
+    right: 10px;
+}
+
+
+.menuicon .hamburgermenu{
+    width: 18px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0px 0px 22px;
+    position: relative !important;;
+}
+
+
+.active .hamburg1 {
+    top: 7px;
+    transform: rotate(41deg);
+    position: absolute !important;
+    left: 152px;
+}
+
+.active .hamburg3 {
+    transform: rotate(133deg);
+    position: absolute !important;
+    top: 8px;
+    left: 152px;
+}
+
+.active .hamburg2{
+    background: transparent;
+} 
+
+.menuUl .sublist1::before{
+    display:none;
+}
+
+.active  .sublist1:hover::before{
+    display:block;
+}
+
+
+.bg-color{
+    background:transparent;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    display:none;
+    background-color: red;
+}
+
+
+
+
+
+
+
+

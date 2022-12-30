@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="bg-color"></div>
+    <div class="container">
+        <div class="menubar">
+            <div class="menuicon active">
+                <div class="hamburgermenu hamburg1"></div>
+                <div class="hamburgermenu hamburg2"></div>
+                <div class="hamburgermenu hamburg3"></div>
+            </div>
+            <ul class="menuUl active">
+                <li class="menulist underline" id="list1">
+                    <span class="icons">
+                        <ion-icon name="person-sharp"></ion-icon>
+                    </span>
+                    <span class="listname">Profile</span>
+                    <ul class="submenu" id="submenu1">
+                        <ion-icon name="triangle" class="triangle"></ion-icon>
+                        <li class="new sublist1">New</li>
+                        <li class="sent sublist">sent</li>
+                        <li class="span sublist">span</li>
+                    </ul>
+                </li>
+                <li class="menulist underline" id="list2">
+                    <span class="icons">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <span class="listname">Message</span>
+                    <ul class="submenu"  id="submenu2">
+                        <ion-icon name="triangle" class="triangle"></ion-icon>
+                        <li class="new sublist1">New</li>
+                        <li class="sent sublist">sent</li>
+                        <li class="span sublist">span</li>
+                    </ul>
+                </li>
+                <li class="menulist underline" id="list3">
+                    <span class="icons">
+                        
+                        <ion-icon name="settings-sharp"></ion-icon>
+                    </span>
+                    <span class="listname">Settings</span>
+                    <ul class="submenu"  id="submenu3">
+                        <ion-icon name="triangle" class="triangle"></ion-icon>
+                        <li class="new sublist1">New</li>
+                        <li class="sent sublist">sent</li>
+                        <li class="span sublist">span</li>
+                    </ul>
+                </li>
+                <li class="menulist " id="list4">
+                    <span class="icons">
+                        <ion-icon name="log-out"></ion-icon>
+                    </span>
+                    <span class="listname">Logout</span>
+                    <ul class="submenu"  id="submenu4">
+                        <ion-icon name="triangle" class="triangle"></ion-icon>
+                        <li class="new sublist1">New</li>
+                        <li class="sent sublist">sent</li>
+                        <li class="span sublist">span</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="profile-cont tap-para">
+                <h1>profile</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Nobis dolorum ex architecto doloremque commodi minus,<br>
+                    voluptate sint esse necessitatibus quasi numquam voluptatum <br>
+                    facere iusto voluptas accusantium nulla aperiam laborum molestias.</p>
+            </div>
+            <div class="message-cont tap-para ">
+                <h1>Message</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Nobis dolorum ex architecto doloremque commodi minus,<br>
+                    voluptate sint esse necessitatibus quasi numquam voluptatum <br>
+                    facere iusto voluptas accusantium nulla aperiam laborum molestias.</p>
+            </div>
+            <div class="settings-cont tap-para">
+                <h1>Setting</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Nobis dolorum ex architecto doloremque commodi minus,<br>
+                    voluptate sint esse necessitatibus quasi numquam voluptatum <br>
+                    facere iusto voluptas accusantium nulla aperiam laborum molestias.</p>
+            </div>
+            <div class="logout-cont tap-para">
+                <h1>Logout</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Nobis dolorum ex architecto doloremque commodi minus,<br>
+                    voluptate sint esse necessitatibus quasi numquam voluptatum <br>
+                    facere iusto voluptas accusantium nulla aperiam laborum molestias.</p>
+            </div>
+        </div>       
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          $(".menulist").click(function(){
+            if( $(this).find(".submenu").hasClass("activemenu")){
+                $(".submenu").removeClass("activemenu");
+                $(".tap-para").removeClass("activemenucontent");
+                $(".bg-color").show();
+            }
+            else{
+                $(".submenu").removeClass("activemenu");
+                $(".tap-para").removeClass("activemenucontent");
+                $(this).find(".submenu").addClass("activemenu");
+                var contname = $(this).find(".listname").text().toLowerCase();
+                var currentClassName = (contname + "-cont");
+                // alert(currentClassName);
+                $("." + currentClassName).addClass("activemenucontent"); 
+                $(".bg-color").show();   
+            }
+          });
+          $(".menuicon").click(function(){
+              if(($(".menubar .menuUl").hasClass("active"))  &&  ($(".menubar .menuicon").hasClass("active")))
+
+              {
+                $(".menubar .menuUl").removeClass("active");
+                $(".menubar .menuicon").removeClass("active");
+                // $(".triangle").hasClass("triangleright");
+                // $(".submenu").css({"position":"absolute","top":"0","left":"63px","width":"160px"});
+                // $(".triangle").css({"transform": "rotate(90deg)" , "left": "-2px"});
+              }
+
+              else{
+                $(".menubar .menuUl").addClass("active");
+                $(".menubar .menuicon").addClass("active");
+                // $(".submenu").css({"position":"relative","left":"0","width":"245px"});
+                // $(".triangle").css({"transform": "rotate(180deg)" , "left": "12px"});
+              }
+
+            $(".bg-color").click(function(){
+                $(".submenu").removeClass("activemenu");
+                $(".bg-color").hide();
+                });
+
+                $(".menuUl .menulist").click(function(){
+                    $(".bg-color").show();
+                });
+          });
+        });
+    </script>
+</body>
+</html>
